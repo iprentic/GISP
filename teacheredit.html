@@ -1,0 +1,48 @@
+<html>
+	<body>
+		<textarea readonly=readonly id=text></textarea>
+		<button type="button" id="thesis">Thesis</button>
+		<button type="button" id="argument">Argument</button>
+		<button type="button" id="evidence">Evidence</button>
+		<ul id="results">
+		</ul>
+		<form action="yay.html" method="GET">
+			<input type="submit" value="Post">
+		</form>
+		<script> 
+		function parse(val) {
+    var result = "Not found",
+        tmp = [];
+    location.search
+    .substr(1)
+        .split("&")
+        .forEach(function (item) {
+        tmp = item.split("=");
+        if (tmp[0] === val) result = decodeURIComponent(tmp[1]);
+    });
+    return result.replace("\+", " ");
+}
+
+function getTextFieldSelection() {
+	var textField = document.getElementById("text");
+	return document.getElementById("text").value.substring(textField.selectionStart, textField.selectionEnd);
+}
+
+function getHighlighted(buttonName) {
+	console.log(getTextFieldSelection());
+	var node = document.createElement("LI");
+	var textNode = document.createTextNode("You said that the "+ buttonName + " was " + getTextFieldSelection());
+	node.appendChild(textNode);
+	document.getElementById("results").appendChild(node);
+}
+ 
+document.addEventListener("DOMContentLoaded", function(event) {
+	document.getElementById("text").value = parse("paste");
+	document.getElementById("evidence").addEventListener("click", function(){getHighlighted("evidence");});
+	document.getElementById("argument").addEventListener("click", function(){getHighlighted("argument");});
+	document.getElementById("thesis").addEventListener("click", function(){getHighlighted("thesis");});
+});
+
+		</script>
+	</body>
+</html>
