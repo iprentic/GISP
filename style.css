@@ -1,0 +1,24 @@
+.big-orange {
+	background-color: #6495ED;
+   width:180px;
+   height:42px;
+}
+body {
+  width: 80%;
+  font: 100% Helvetica;
+  font-weight: bold;
+}
+.orange-border {
+	border-color: #FF7518;
+	border-width: 4px;
+}
+.right-elt {
+	float:right;
+}
+
+#submit {
+        width:180px;
+        height:42px;
+  font: 100% Helvetica;
+  font-weight: bold;
+}
