@@ -1,0 +1,29 @@
+<html>
+	<link href="style.css" rel="stylesheet">
+	<body align="center">
+		<br />
+		<h2> Welcome to <font size=6 color="#6495ED"> Analyt </font> </h1>
+		<form name="login" onsubmit="return validateForm()" method="post">
+		<label class="big-orange" for="username"> Username:</label> <input class="orange-border" type="text" name="username" id="username" /></label><br /><br />
+ 		<label class="big-orange" for="password"> Password:</label> <input type="password" name="password" class="orange-border" id="password" /></label>
+	<br /><br /><input class="big-orange" type="submit" value="Submit">
+		</form>
+	</body>
+
+	<script type="text/javascript">
+	function validateForm(){
+		var uname=document.forms["login"]["username"].value;
+		var pwd = document.forms["login"]["password"].value;
+		if (uname=="gisp" && pwd=="gisp"){
+			window.location.href="teacherupload.html";
+		} 
+		else if (uname==null || uname==""){		
+  			alert("Username must be filled out");
+  			
+  		}
+  		else alert("Incorrect username/password combination");
+  		document.forms["login"]["password"].value = "";
+  		return false;
+	}
+	</script>
+</html>
