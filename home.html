@@ -6,7 +6,7 @@
 		<form name="login" onsubmit="return validateForm()" method="post">
 		<label class="big-orange" for="username"> Username:</label> <input class="orange-border" type="text" name="username" id="username" /></label><br /><br />
  		<label class="big-orange" for="password"> Password:</label> <input type="password" name="password" class="orange-border" id="password" /></label>
-	<br /><br /><input class="big-orange" type="submit" value="Submit">
+	<br /><br /><input class="big-orange" id="submit" type="submit" value="Submit">
 		</form>
 	</body>
 
@@ -15,7 +15,7 @@
 		var uname=document.forms["login"]["username"].value;
 		var pwd = document.forms["login"]["password"].value;
 		if (uname=="gisp" && pwd=="gisp"){
-			window.location.href="teacherupload.html";
+			window.location.href="teacherhomepage.html";
 		} 
 		else if (uname==null || uname==""){		
   			alert("Username must be filled out");
