@@ -23,6 +23,11 @@ body {
   font-weight: bold;
 }
 
+.edit-button {
+    font: 100% Helvetica;
+  font-weight: bold;
+}
+
 #assignments-table .title-row{
   background-color: #FF7518;
 }
