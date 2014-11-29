@@ -22,3 +22,11 @@ body {
   font: 100% Helvetica;
   font-weight: bold;
 }
+
+#assignments-table .title-row{
+  background-color: #FF7518;
+}
+
+#assignments-table .odd-row{
+  background-color: #ffc966;
+}
