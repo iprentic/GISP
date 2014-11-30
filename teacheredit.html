@@ -8,9 +8,9 @@
 	<body>
 		<textarea class="orange-border" cols="60" rows="20" readonly=readonly id=text></textarea>
 	<p>
-		<button class="edit-button" type="button" id="thesis">Thesis</button>
-		<button class="big-orange edit-button" type="button" id="argument">Argument</button>
-		<button class="big-orange edit-button" type="button" id="evidence">Evidence</button>
+		<button class="edit-button" type="button" id="Thesis">Thesis</button>
+		<button class="big-orange edit-button" type="button" id="Argument">Argument</button>
+		<button class="big-orange edit-button" type="button" id="Evidence">Evidence</button>
 		<ul id="results">
 		</ul>
 		<form action="teacherdocuments.html" method="GET">
@@ -37,7 +37,7 @@ function getTextFieldSelection() {
 
 function getHighlighted(buttonName, theColor) {
 	var node = document.createElement("LI");
-	var textNode = document.createTextNode("You said that the "+ buttonName + " was " + getTextFieldSelection());
+	var textNode = document.createTextNode(buttonName + ": " + getTextFieldSelection());
 	node.appendChild(textNode);
 	document.getElementById("results").appendChild(node);
 	var start = document.getElementById("text").selectionStart;
@@ -53,9 +53,9 @@ function getHighlighted(buttonName, theColor) {
  
 document.addEventListener("DOMContentLoaded", function(event) {
 	document.getElementById("text").value = parse("paste");
-	document.getElementById("evidence").addEventListener("click", function(){getHighlighted("evidence", "#66CCCC");});
-	document.getElementById("argument").addEventListener("click", function(){getHighlighted("argument", "#458B00");});
-	document.getElementById("thesis").addEventListener("click", function(){getHighlighted("thesis", "#FF7518");});
+	document.getElementById("Evidence").addEventListener("click", function(){getHighlighted("Evidence", "#66CCCC");});
+	document.getElementById("Argument").addEventListener("click", function(){getHighlighted("Argument", "#458B00");});
+	document.getElementById("Thesis").addEventListener("click", function(){getHighlighted("Thesis", "#FF7518");});
 	document.ranges = [];
 });
 
