@@ -8,7 +8,7 @@
 	<body>
 		<textarea class="orange-border" cols="60" rows="20" readonly=readonly id=text></textarea>
 	<p>
-		<button class="big-orange edit-button" type="button" id="thesis">Thesis</button>
+		<button class="edit-button" type="button" id="thesis">Thesis</button>
 		<button class="big-orange edit-button" type="button" id="argument">Argument</button>
 		<button class="big-orange edit-button" type="button" id="evidence">Evidence</button>
 		<ul id="results">
@@ -44,6 +44,8 @@ function getHighlighted(buttonName, theColor) {
 	var end = document.getElementById("text").selectionEnd;
 	document.ranges.push({color: theColor, start: start, end: end});
 	console.log(document.ranges);
+	    $("#text").highlightTextarea("destroy");
+
     $("#text").highlightTextarea({
 	ranges: document.ranges
 });
@@ -51,9 +53,9 @@ function getHighlighted(buttonName, theColor) {
  
 document.addEventListener("DOMContentLoaded", function(event) {
 	document.getElementById("text").value = parse("paste");
-	document.getElementById("evidence").addEventListener("click", function(){getHighlighted("evidence", "#00FF00");});
-	document.getElementById("argument").addEventListener("click", function(){getHighlighted("argument", "#FF0000");});
-	document.getElementById("thesis").addEventListener("click", function(){getHighlighted("thesis", "#0000FF");});
+	document.getElementById("evidence").addEventListener("click", function(){getHighlighted("evidence", "#66CCCC");});
+	document.getElementById("argument").addEventListener("click", function(){getHighlighted("argument", "#458B00");});
+	document.getElementById("thesis").addEventListener("click", function(){getHighlighted("thesis", "#FF7518");});
 	document.ranges = [];
 });
 

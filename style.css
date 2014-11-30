@@ -26,6 +26,8 @@ body {
 .edit-button {
     font: 100% Helvetica;
   font-weight: bold;
+       width:180px;
+   height:42px;
 }
 
 #assignments-table .title-row{
@@ -34,4 +36,17 @@ body {
 
 #assignments-table .odd-row{
   background-color: #ffc966;
+}
+
+#thesis {
+  background-color: #FF7518;
+
+}
+
+#argument {
+  background-color: #458B00;
+}
+
+#evidence {
+  background-color: #66CCCC;
 }
