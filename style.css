@@ -7,6 +7,7 @@ body {
   width: 80%;
   font: 100% Helvetica;
   font-weight: bold;
+  background-color: #ebeaed;
 }
 .orange-border {
 	border-color: #FF7518;
@@ -29,7 +30,11 @@ body {
        width:180px;
    height:42px;
 }
-
+#assignments-table {
+    margin: 0 auto;
+    padding: 0;
+	width:90%;
+}
 #assignments-table .title-row{
   font-weight: bold;
   background-color: #FF7518;
@@ -51,3 +56,44 @@ body {
 #evidence {
   background-color: #66CCCC;
 }
+
+  .nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+  }
+
+  .nav li {
+      float: left;
+      display: inline;
+      padding-right: 35%;
+  }
+
+  .nav-wrapper {
+    background-color: #ed611f;
+    padding: 1px;
+    border-bottom: 10px solid #60afe4;
+
+  }
+
+  .nav {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .nav a:link, a:visited {
+      display: block;
+      width: 100%;
+      font-weight: bold;
+      color: #FFFFFF;
+      background-color: #ed611f;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+  }
+
+  .nav a:hover, a:active {
+      background-color: #a64619;
+  }
