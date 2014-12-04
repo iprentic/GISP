@@ -31,6 +31,7 @@ body {
 }
 
 #assignments-table .title-row{
+  font-weight: bold;
   background-color: #FF7518;
 }
 
